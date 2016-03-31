@@ -38,7 +38,6 @@ let s:hdevtools_info_buffer = -1
 function annotations#LoadAnns(fileName)
   let b:file = readfile(a:fileName)
   let b:spans = []
-  echo "Loaded annotation file: " . a:fileName
   for line in b:file
     let div = stridx(line, "::")
     let llmatch = matchlist(line, '\(\d\+\):\(\d\+\)-\(\d\+\):\(\d\+\)::\(.*\)')
